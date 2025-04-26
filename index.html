@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colorful Task Manager</title>
+  <link rel="stylesheet" href="TM.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Task Manager</h1>
+    <div class="task-input">
+      <input type="text" id="taskInput" placeholder="Add a new task...">
+      <button id="addTaskBtn">Add Task</button>
+    </div>
+    <ul id="taskList"></ul>
+    <div id="celebration" class="hidden">
+      <p>Great job! All tasks completed!</p>
+      <canvas id="confetti"></canvas>
+    </div>
+  </div>
+  <audio id="celebrationSound" src="magic.mp3" preload="auto"></audio>
+  <script src="TM.js"></script>
+</body>
+</html>
