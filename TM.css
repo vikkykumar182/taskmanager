@@ -1,0 +1,151 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+  }
+  
+  .container {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    border: 2px solid transparent; /* Initial transparent border */
+    transition: border-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  }
+  .container:hover {
+    border-color: #ff6f61; /* Change border color on hover */
+    transform: scale(1.02); /* Slightly scale up the container */
+  }
+  
+  h1 {
+    text-align: center;
+    color: #ff6f61;
+  }
+  
+  .task-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  #taskInput {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ff6f61;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  #addTaskBtn {
+    padding: 10px 20px;
+    background: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+  }
+  
+  #addTaskBtn:hover {
+    background: #ff3b2f;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+    background: #f8f8f8;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    animation: slideIn 0.5s ease;
+  }
+  
+  li.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+    animation: fadeOut 0.5s ease;
+  }
+  
+  li.deleting {
+    animation: shrinkOut 0.5s ease;
+  }
+  
+  button.deleteBtn {
+    background: #ff3b2f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  button.deleteBtn:hover {
+    background: #d32f2f;
+  }
+  
+  #celebration {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #ff6f61;
+  }
+  #confetti {
+    position: absolute; /* Position the canvas absolutely within the container */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Ensure the canvas doesn't block interactions */
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Animations */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0.6;
+    }
+  }
+  
+  @keyframes shrinkOut {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(0);
+    }
+  }
